@@ -6,12 +6,28 @@ using System.Threading.Tasks;
 
 namespace Assignment2
 {
-    //this is where the majority of your code will go. also, your commit worked.
+    //TODO: 
+        //Add a menu: populate, select, save, load, exit
+        //create Employee array
+        //populate employee objects
+        //
     class Payroll
     {
         static void Main(string[] args)
         {
 
         }
+
+        void menu() { }
+
+        void populateEmployee() { }
+
+        void selectEmployee() { }
+
+        void saveEmployee() { }
+
+        void loadEmployee() { }
     }
+
+    
 }
