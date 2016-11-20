@@ -9,6 +9,7 @@ namespace Assignment2
     [Serializable]
     public class Commission : Employee
     {
+        //commit to work
         public override void computeGross()
         {
             int itemssold;
