@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Assignment2
 {
-   public class Salary:Employee
+    [Serializable]
+    public class Salary:Employee
     {
         public override void computeGross()
         {

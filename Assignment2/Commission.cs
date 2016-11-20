@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment2
 {
+    [Serializable]
     public class Commission : Employee
     {
         public override void computeGross()
@@ -18,7 +19,7 @@ namespace Assignment2
             itemssold = Convert.ToInt32(Console.ReadLine());//take in number items sold
 
             
-            Console.WriteLine("number of units sold");//ask for unit price
+            Console.WriteLine("unit price");//ask for unit price
            unitprice = Convert.ToInt32(Console.ReadLine());//take unit price
             gross = (float) ((itemssold * unitprice)*.5) ;//50% of (multiply "itemssold" sold by unit price)
 

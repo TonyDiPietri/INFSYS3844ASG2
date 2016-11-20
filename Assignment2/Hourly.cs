@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Assignment2
 {
-   public class Hourly : Employee
+    [Serializable]
+    public class Hourly : Employee
 
     {
        public override void computeGross()
@@ -28,16 +29,11 @@ namespace Assignment2
                     gross = (float)((rateperhour * 40) + ((numberofhourswork - 40) * (rateperhour * 1.5)));
                 }
 
-
+            Console.WriteLine("Gross pay calculated as: $" + gross);
+            
+            
             //ask for overtime hours at one and half
             //take in overtime hours at one and half
-
-
-
-
-
-
-
             // gross = rate * hours;
         }
 

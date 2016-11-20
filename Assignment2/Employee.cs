@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment2
 {
+    [Serializable]
     public class Employee
     {
         //TODO: Set up method calls and if statements for computeGross, tax, netperc
@@ -46,7 +47,7 @@ namespace Assignment2
                 Console.WriteLine("2) Calculate Tax");
                 Console.WriteLine("3) Calculate Net Pay");
                 Console.WriteLine("4) Calculate Net Percent");
-                Console.WriteLine("5) Display Employee");
+                Console.WriteLine("5) Display Employee and Exit");
 
                 input = Convert.ToInt32(Console.ReadLine());
 
@@ -76,6 +77,7 @@ namespace Assignment2
         public void computeTax()
         {
             tax = gross * taxrate;
+            Console.WriteLine("Tax calculated as: $" + tax);
         }
 
         public void computeNet()
@@ -91,7 +93,7 @@ namespace Assignment2
         public void displayEmployee()
         {
             Console.WriteLine("Hours: " + hours);
-            Console.WriteLine("Rate: " + rate);
+            Console.WriteLine("Rate: " + taxrate);
             Console.WriteLine("Gross: " + gross);
             Console.WriteLine("Net: " + net);
             Console.WriteLine("Net%: " + net_percent + "%");
