@@ -16,7 +16,7 @@ namespace Assignment2
         *********************/
         public float rate = 30.0f;
         float taxrate = 0.2f;
-        public int hours = 45;
+        public int hours = 0;
         public float gross = 0.0f;
         float tax = 0.0f;
         float net = 0.0f;
@@ -49,7 +49,17 @@ namespace Assignment2
                 Console.WriteLine("4) Calculate Net Percent");
                 Console.WriteLine("5) Display Employee and Exit");
 
-                input = Convert.ToInt32(Console.ReadLine());
+                try
+                {
+                    input = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Invalid input. Please try again.");
+                    menu();
+                    throw;
+                }
+                
 
                 if (input == 1){computeGross();}
 
@@ -76,23 +86,41 @@ namespace Assignment2
 
         public void computeTax()
         {
-            tax = gross * taxrate;
-            Console.WriteLine("Tax calculated as: $" + tax);
+            if (tax == 0.0)
+            {
+                computeGross();
+                tax = gross * taxrate;
+                Console.WriteLine("Tax calculated as: $" + tax);
+            }
+            else { }
         }
 
         public void computeNet()
         {
-            net = gross - tax;
+            if (net == 0.0)
+            {
+                computeTax();
+                net = gross - tax;
+                Console.WriteLine("Net pay calculated as $" + net);
+            }
+            else { }
         }
 
         public void computeNetperc()
         {
-            net_percent = (net / gross) * 100;
+            if (net_percent == 0.0)
+            {
+                computeNet();
+                net_percent = (net / gross) * 100;
+                Console.WriteLine("Net percent calculated as " + net_percent + "%");
+            }
         }
 
         public void displayEmployee()
         {
-            Console.WriteLine("Hours: " + hours);
+            computeNetperc();
+            if (hours != 0.0) { Console.WriteLine("Hours: " + hours); }
+            else { }
             Console.WriteLine("Rate: " + taxrate);
             Console.WriteLine("Gross: " + gross);
             Console.WriteLine("Net: " + net);

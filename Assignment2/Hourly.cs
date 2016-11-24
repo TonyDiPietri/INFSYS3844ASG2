@@ -12,25 +12,31 @@ namespace Assignment2
     {
        public override void computeGross()
         {
-            double numberofhourswork;
-            double rateperhour;
-            Console.WriteLine("number of hours work"); //ask number of hours worked
-            numberofhourswork = Convert.ToInt32(Console.ReadLine()); //take in number of hours work and assign it to "hours"
+            if (gross == 0.0)
+            {
+                double numberofhoursworked;
+                double rateperhour;
+                Console.WriteLine("Please enter your number of hours worked:"); //ask number of hours worked
+                numberofhoursworked = Convert.ToInt32(Console.ReadLine()); //take in number of hours work and assign it to "hours"
 
-            Console.WriteLine("ask for rate per hour");// ask for rate per hour
-            rateperhour = Convert.ToInt32(Console.ReadLine());  //take in rate per hour
+                Console.WriteLine("What is your hourly rate of pay?");// ask for rate per hour
+                rateperhour = Convert.ToInt32(Console.ReadLine());  //take in rate per hour
 
-            if (numberofhourswork <= 40)
+                if (numberofhoursworked <= 40)
                 {
-                    gross = (float)(numberofhourswork* rateperhour);
+                    gross = (float)(numberofhoursworked * rateperhour);
                 }
+                else
+                {
+                    gross = (float)((rateperhour * 40) + ((numberofhoursworked - 40) * (rateperhour * 1.5)));
+                }
+
+                Console.WriteLine("Gross pay calculated as: $" + gross);
+            }
             else
-                {
-                    gross = (float)((rateperhour * 40) + ((numberofhourswork - 40) * (rateperhour * 1.5)));
-                }
-
-            Console.WriteLine("Gross pay calculated as: $" + gross);
-            
+            {
+                //do nothing
+            }
             
             //ask for overtime hours at one and half
             //take in overtime hours at one and half

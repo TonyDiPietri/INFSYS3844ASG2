@@ -37,7 +37,17 @@ namespace Assignment2
                 Console.WriteLine("4) Save Employee Info");
                 Console.WriteLine("5) Exit");
 
-                input = Convert.ToInt32(Console.ReadLine());
+                try
+                {
+                    input = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (Exception ioe)
+                {
+                    Console.WriteLine("Invalid input. Please try again.");
+                    topMenu();
+                    throw;
+                }
+                //input = Convert.ToInt32(Console.ReadLine());
 
                 if (input == 1)
                 {
@@ -90,6 +100,7 @@ namespace Assignment2
             employeeArray[2] = new Commission();
 
             empscreated = true;
+            Console.WriteLine("New employees have been populated successfully.");
         }
 
         void selectEmployee()
@@ -97,7 +108,17 @@ namespace Assignment2
             Console.WriteLine("Please enter employee 0, 1, or 2");
             //Scanner sc = new Scanner(System.in);
             int selectedIndex;
-            selectedIndex = Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                selectedIndex = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (Exception ioe)
+            {
+                Console.WriteLine("Invalid input. Please try again.");
+                selectEmployee();
+                throw;
+            }
+            
             employeeArray[selectedIndex].menu();
         }
 
