@@ -15,3 +15,9 @@ C:\Users\Tony\OneDrive\School\Programming\C#\infsys3844asg2\Assignment2\obj\Debu
 C:\Users\Tony\OneDrive\School\Programming\C#\infsys3844asg2\Assignment2\obj\Debug\Assignment2.csprojResolveAssemblyReference.cache
 C:\Users\Tony\OneDrive\School\Programming\C#\infsys3844asg2\Assignment2\bin\Debug\Assignment2.exe
 C:\Users\Tony\OneDrive\School\Programming\C#\infsys3844asg2\Assignment2\bin\Debug\Assignment2.pdb
+C:\Users\aadn7d\Documents\GitHub\infsys3844asg2\Assignment2\bin\Debug\Assignment2.exe.config
+C:\Users\aadn7d\Documents\GitHub\infsys3844asg2\Assignment2\obj\Debug\Assignment2.exe
+C:\Users\aadn7d\Documents\GitHub\infsys3844asg2\Assignment2\obj\Debug\Assignment2.pdb
+C:\Users\aadn7d\Documents\GitHub\infsys3844asg2\Assignment2\bin\Debug\Assignment2.exe
+C:\Users\aadn7d\Documents\GitHub\infsys3844asg2\Assignment2\bin\Debug\Assignment2.pdb
+C:\Users\aadn7d\Documents\GitHub\infsys3844asg2\Assignment2\obj\Debug\Assignment2.csprojResolveAssemblyReference.cache

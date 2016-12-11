@@ -1,0 +1,5 @@
+Hours: 45
+Rate: 0.2
+Gross: 475
+Net: 380
+Net%: 80%

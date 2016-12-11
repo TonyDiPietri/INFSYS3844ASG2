@@ -15,12 +15,12 @@ namespace Assignment2
              Attributes
         *********************/
         public float rate = 30.0f;
-        float taxrate = 0.2f;
-        public int hours = 0;
+        public float taxrate = 0.2f;
+        public float hours = 0;
         public float gross = 0.0f;
-        float tax = 0.0f;
-        float net = 0.0f;
-        float net_percent = 0.0f;
+        public float tax = 0.0f;
+        public float net = 0.0f;
+        public float net_percent = 0.0f;
 
         //End Attributes
 
@@ -47,7 +47,7 @@ namespace Assignment2
                 Console.WriteLine("2) Calculate Tax");
                 Console.WriteLine("3) Calculate Net Pay");
                 Console.WriteLine("4) Calculate Net Percent");
-                Console.WriteLine("5) Display Employee and Exit");
+                Console.WriteLine("5) Display Employee, Print to .txt file, and Exit");
 
                 try
                 {
@@ -116,7 +116,7 @@ namespace Assignment2
             }
         }
 
-        public void displayEmployee()
+        public virtual void displayEmployee()
         {
             computeNetperc();
             if (hours != 0.0) { Console.WriteLine("Hours: " + hours); }

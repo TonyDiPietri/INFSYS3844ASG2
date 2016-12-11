@@ -17,6 +17,9 @@ namespace Assignment2
     {
         bool empscreated = false;
         static Employee[] employeeArray = new Employee[3];
+        //public static string[] hourlyData = new string[5];
+        //public static string[] salaryData = new string[5];
+        //public static string[] commissionData = new string[5];
 
         static void Main(string[] args)
         {
@@ -79,6 +82,7 @@ namespace Assignment2
 
                 else if (input == 5)
                 {
+                    //savePaystub();
                     int exitCode = 0;
                     Environment.Exit(exitCode);
                 }
@@ -141,6 +145,20 @@ namespace Assignment2
             FileStream.Close();
             empscreated = true;
         }
+
+        //void savePaystub()
+        //{
+        //    int i = 0;
+        //    for (i = 0; i < 3; i++)
+        //    {
+        //        //System.IO.File.WriteAllLines("test" + i + ".txt", employeeArray[i]);
+        //        //File.WriteAllText("test" + i + ".txt", employeeArray[i]);
+        //        System.IO.Stream FileStream = File.Create("test" + i + ".txt");
+        //        BinaryFormatter serializer = new BinaryFormatter();
+        //        serializer.Serialize(FileStream, employeeArray[i]);
+        //        FileStream.Close();
+        //    }
+        //}
     }
 
     
